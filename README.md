@@ -1,54 +1,66 @@
-# React + TypeScript + Vite
+# 🎨 Blend Lumina Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and elegant frontend for the **Blend Lumina** art trading platform, built with **React + TypeScript + Vite**.  
+Seamlessly integrates with a Django REST backend to support user authentication, artwork browsing, custom requests, order management, and more.
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/badge/Built%20with-React-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Language-TypeScript-purple?style=flat-square" />
+  <img src="https://img.shields.io/badge/Bundler-Vite-ffcc00?style=flat-square" />
+  <img src="https://img.shields.io/badge/Auth-JWT-orange?style=flat-square" />
+  <img src="https://img.shields.io/badge/Status-In%20Development-yellow?style=flat-square" />
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🖼️ Screenshots
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+> Coming soon... (Add homepage/artwork list previews here)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## ⚙️ Tech Stack
+
+| Layer       | Stack                        |
+|-------------|------------------------------|
+| Framework   | React + Vite                 |
+| Language    | TypeScript                   |
+| UI Library  | [Ant Design](https://ant.design) / MUI / Chakra UI (your choice) |
+| Routing     | React Router v6              |
+| State Mgmt  | React Context (Auth)         |
+| HTTP Client | Axios                        |
+| Auth        | JWT (via DRF backend)        |
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+├── assets/         # Static assets like logo, images
+├── components/     # Shared reusable components (e.g. Navbar, Footer)
+├── pages/          # Page-level components (Login, Home, Shop, etc.)
+├── services/       # Axios services for API calls
+├── contexts/       # Global state contexts (e.g. AuthContext)
+├── hooks/          # Custom React hooks
+├── utils/          # Utility functions
+├── App.tsx         # Main app entry
+└── main.tsx        # Vite entry point
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Getting Started
+1. Install dependencies
+```bash npm install```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. Run development server
+```npm run dev```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+3. Open browser
+http://localhost:5173
+
+
+
+
+## 🧑‍🎨 About the Project
+Blend Lumina is designed to connect artists and buyers through a smooth, visually-rich platform. The frontend emphasizes clarity, responsiveness, and modularity — ready to scale with any design system.
